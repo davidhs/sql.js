@@ -646,11 +646,13 @@ Module["onRuntimeInitialized"] = function onRuntimeInitialized() {
     * @memberof module:SqlJs
     * Open a new database either by creating a new one or opening an existing
     * one stored in the byte array passed in first argument
+    * @param {string} filename
     * @param {number[]} data An array of bytes representing
     * an SQLite database file
     */
-    function Database(data) {
-        this.filename = "dbfile_" + (0xffffffff * Math.random() >>> 0);
+    function Database(filename, data) {
+        this.filename = filename;
+
         if (data != null) {
             FS.createDataFile("/", this.filename, data, true, true);
         }

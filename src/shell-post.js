@@ -8,8 +8,6 @@
 } // The end of our initSqlJs function
 
 
-export default initSqlJs;
 
-export {
-    initSqlJs
-};
+
+

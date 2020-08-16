@@ -6,7 +6,9 @@ var dbFileElm = document.getElementById('dbfile');
 var savedbElm = document.getElementById('savedb');
 
 // Start the worker in which sql.js will run
-var worker = new Worker("../../dist/worker.sql-wasm.js");
+var worker = new Worker("../../dist/worker.sql-wasm.js", {
+	type: "module"
+});
 worker.onerror = error;
 
 // Open a database
