@@ -13,6 +13,8 @@
 // TODO: Make this not declare a global if used in the browser
 var initSqlJsPromise = undefined;
 
+var module = undefined;
+
 var initSqlJs = function (moduleConfig) {
 
     if (initSqlJsPromise){
